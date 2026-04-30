@@ -12,6 +12,7 @@ Currently looking for Helpdesk / Tier 1 IT support roles.
 4. Windows Deployment Services (WDS) Imaging Lab (2026)
 5. Multi-Domain Environment Lab (2026)
    
+--------------------------------------------------------------
 ### 1. Capstone Project — Enterprise Network Infrastructure (2026)
 Built a full enterprise-level network environment using only virtual machines on a physical PC.
 
