@@ -207,7 +207,8 @@ https://drive.google.com/file/d/1UwvhyRCF5vW-DiYp70tSQrB06f9ktFDm/view?usp=shari
 - How DHCP scopes, exclusions, and reservations control IP assignment across a domain environment
 
 ## Skills
-- Windows Server / Windows Server Core
+- Windows Server / Windows Server Core 2022/2025
+- Windows 10/11
 - Linux (Ubuntu, CentOS)
 - Networking (TCP/IP, DNS, DHCP, SMTP, IMAP, POP3, Firewall)
 - Virtualization (Hyper-V, VirtualBox)
