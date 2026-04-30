@@ -6,8 +6,13 @@ I learn best by doing, and I enjoy making complex systems visually clear.
 Currently looking for Helpdesk / Tier 1 IT support roles.
 
 ## Projects
-
-### Capstone Project — Enterprise Network Infrastructure (2026)
+1. Capstone Project — Enterprise Network Infrastructure (2026)
+2. Multi-Site Domain Project (2026)
+3. CentOS 7 — Two Mail Server Configuration (2025)
+4. Windows Deployment Services (WDS) Imaging Lab (2026)
+5. Multi-Domain Environment Lab (2026)
+   
+### 1. Capstone Project — Enterprise Network Infrastructure (2026)
 Built a full enterprise-level network environment using only virtual machines on a physical PC.
 
 **Technologies used:**
@@ -40,7 +45,7 @@ Built a full enterprise-level network environment using only virtual machines on
 
 
 --------------------------------------------------------------
-### Multi-Site Domain Project (2026)
+### 2. Multi-Site Domain Project (2026)
 Built a simulated multi-site enterprise network connecting two geographically separated offices (Vancouver and Toronto) using virtualization.
 
 **Technologies used:**
@@ -68,7 +73,7 @@ Built a simulated multi-site enterprise network connecting two geographically se
 - AD Sites and Services subnet and site link configuration
 
 ----------------------------------------------------------------
-### CentOS 7 — Two Mail Server Configuration (2025)
+### 3. CentOS 7 — Two Mail Server Configuration (2025)
 Built a fully functional two-server mail system on CentOS 7 using virtual machines, with pfSense as the NAT router/gateway.
 
 **Technologies used:**
@@ -104,7 +109,7 @@ https://drive.google.com/file/d/1bK2HzKV_nOraDDUuZ0-t9Phd2wyj9qHU/view?usp=share
 
 
 ----------------------------------------------------------------
-### Windows Deployment Services (WDS) Imaging Lab (2026)
+### 4. Windows Deployment Services (WDS) Imaging Lab (2026)
 Built a fully functional Windows imaging and deployment pipeline using WDS on Windows Server 2025,
 with Hyper-V for virtualization and a customized Windows 10 Gold Image for automated network deployment.
 
@@ -163,7 +168,7 @@ https://drive.google.com/file/d/1zDWLs1tbTxz0OpXYTuE9fXHdmnya-4wW/view?usp=share
 - How differencing disks allow non-destructive VM cloning for capture workflows
 
 ----------------------------------------------------------------
-### Windows Deployment Services (WDS) Imaging Lab (2026)
+### 5. Multi-Domain Environment Lab (2026)
 Built a fully functional multi-domain enterprise network using Hyper-V and Windows Server 2025, including NAT routing, Active Directory with a child domain, DHCP, DNS, and centralized management via RSAT from a Windows 11 client.
 
 **Technologies used:**
