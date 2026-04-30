@@ -46,6 +46,7 @@ Built a full enterprise-level network environment using only virtual machines on
 - Troubleshooting & Documentation
 
 
+--------------------------------------------------------------
 ### Multi-Site Domain Project (2026)
 Built a simulated multi-site enterprise network connecting two geographically separated offices (Vancouver and Toronto) using virtualization.
 
@@ -72,3 +73,46 @@ Built a simulated multi-site enterprise network connecting two geographically se
 - How multi-site AD replication works across a WAN link
 - IPsec VPN tunnel configuration using both pfSense and Windows RRAS
 - AD Sites and Services subnet and site link configuration
+
+----------------------------------------------------------------
+### CentOS 7 — Two Mail Server Configuration (2025)
+Built a fully functional two-server mail system on CentOS 7 using virtual machines, with pfSense as the NAT router/gateway.
+
+**Technologies used:**
+CentOS 7 (x2 virtual machines)
+Postfix (SMTP server)
+Dovecot (IMAP / POP3)
+SquirrelMail + Apache (Webmail)
+pfSense (Firewall / Router)
+Thunderbird (Mail client)
+Wireshark / tshark (Network traffic analysis)
+
+**What I built:**
+Configured two mail servers with separate domains (mail.tsplab.com / mail2.tsplab.com)
+Set up pfSense DNS resolver with MX records and static DHCP mappings
+Configured Postfix with Gmail relay (SASL authentication, TLS, port 587)
+Installed and configured Dovecot for IMAP (port 143) and POP3 (port 110)
+Installed SquirrelMail on Apache for browser-based webmail access
+Verified email delivery across both servers using telnet and Thunderbird
+Captured live SMTP traffic between servers using tshark
+
+**Network Diagram:**
+<img width="805" height="572" alt="スクリーンショット 2026-04-30 午後2 05 03" src="https://github.com/user-attachments/assets/567cb78c-73ba-49c9-878c-ddf6e4631240" />
+
+**Demo Video:**
+Watch mail sent between 2 domains
+https://drive.google.com/file/d/1bK2HzKV_nOraDDUuZ0-t9Phd2wyj9qHU/view?usp=share_link
+
+**What I learned:**
+How SMTP, IMAP, and POP3 work at the protocol level (tested manually via telnet)
+How pfSense DNS resolver handles internal MX records
+Debugging mail delivery issues using logs and queue inspection
+
+
+## Skills
+Windows Server / Windows Core
+Linux (CentOS, Ubuntu)
+Networking (TCP/IP, DNS, DHCP, SMTP, IMAP, POP3, Firewall)
+Virtualization (Hyper-V, VirtualBox)
+Active Directory
+Troubleshooting & Documentation
