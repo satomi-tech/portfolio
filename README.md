@@ -25,6 +25,10 @@ Built a full enterprise-level network environment using only virtual machines on
 - Configured iSCSI storage and Hyper-V cluster with Live Migration
 - Documented 190+ pages of step-by-step configuration and troubleshooting
 
+**Network Diagram:**
+<img width="803" height="652" alt="スクリーンショット 2026-04-30 午後1 44 53" src="https://github.com/user-attachments/assets/32810066-7eec-46d4-97b8-882ab5792a3f" />
+<img width="800" height="419" alt="スクリーンショット 2026-04-30 午後1 45 04" src="https://github.com/user-attachments/assets/b173261d-cc62-4078-8c2a-1518d8918d86" />
+
 **Demo Video:**
 [Watch the network infrastructure test on YouTube](https://youtu.be/_P3HYmrGIL4)
 
@@ -60,6 +64,9 @@ Built a simulated multi-site enterprise network connecting two geographically se
 - Set up Active Directory replication between Vancouver and Toronto DCs
 - Verified replication of users, DNS A records, and GPOs across sites
 - Documented all configurations and test results (75 pages)
+
+**Network Diagram:**
+<img width="726" height="286" alt="スクリーンショット 2026-04-30 午後1 44 31" src="https://github.com/user-attachments/assets/528a9be5-ff49-41b8-a1a4-52d18e6322cd" />
 
 **What I learned:**
 - How multi-site AD replication works across a WAN link
