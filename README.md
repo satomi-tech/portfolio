@@ -37,13 +37,6 @@ Built a full enterprise-level network environment using only virtual machines on
 - Troubleshooting under pressure (rebuilt the entire environment from scratch after hardware failure)
 - The importance of following diagrams top-to-bottom and keeping detailed notes
 
-## Skills
-- Windows Server / Windows Core
-- Linux (Ubuntu)
-- Networking (TCP/IP, DNS, DHCP, Firewall)
-- Virtualization (Hyper-V)
-- Active Directory
-- Troubleshooting & Documentation
 
 
 --------------------------------------------------------------
@@ -109,14 +102,6 @@ https://drive.google.com/file/d/1bK2HzKV_nOraDDUuZ0-t9Phd2wyj9qHU/view?usp=share
 - Debugging mail delivery issues using logs and queue inspection
 
 
-## Skills
-- Windows Server / Windows Core
-- Linux (CentOS, Ubuntu)
-- Networking (TCP/IP, DNS, DHCP, SMTP, IMAP, POP3, Firewall)
-- Virtualization (Hyper-V, VirtualBox)
-- Active Directory
-- Troubleshooting & Documentation
-
 
 ----------------------------------------------------------------
 ### Windows Deployment Services (WDS) Imaging Lab (2026)
@@ -179,12 +164,14 @@ https://drive.google.com/file/d/1zDWLs1tbTxz0OpXYTuE9fXHdmnya-4wW/view?usp=share
 
 
 ## Skills
-- Windows Server Administration
+- Windows Server / Windows Server Core
+- Linux (Ubuntu, CentOS)
+- Networking (TCP/IP, DNS, DHCP, SMTP, IMAP, POP3, Firewall)
+- Virtualization (Hyper-V, VirtualBox)
+- Active Directory Domain Services
 - Windows Deployment Services (WDS) / PXE Imaging
-- Hyper-V Virtualization
 - Sysprep & WIM Image Management
-Windows ADK / WSIM / Unattend Answer Files
-Active Directory Domain Services
-PowerShell Scripting (server provisioning, RSAT install)
-Networking (TCP/IP, DHCP, PXE, NAT)
-Troubleshooting & Technical Documentation
+- Windows ADK / WSIM / Unattend Answer Files
+- pfSense (Firewall / Routing / IPsec VPN)
+- PowerShell Scripting
+- Troubleshooting & Technical Documentation
