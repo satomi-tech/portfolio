@@ -162,6 +162,43 @@ https://drive.google.com/file/d/1zDWLs1tbTxz0OpXYTuE9fXHdmnya-4wW/view?usp=share
 - How to troubleshoot WDS image catalog errors (resource section missing → export image first, then re-catalog)
 - How differencing disks allow non-destructive VM cloning for capture workflows
 
+----------------------------------------------------------------
+### Windows Deployment Services (WDS) Imaging Lab (2026)
+Built a fully functional multi-domain enterprise network using Hyper-V and Windows Server 2025, including NAT routing, Active Directory with a child domain, DHCP, DNS, and centralized management via RSAT from a Windows 11 client.
+
+**Technologies used:**
+- Windows Server 2025 (DC, RRAS, DHCP — Server Core & GUI)
+- Windows 11 (IT-01 Client)
+- Hyper-V (Virtualization + NAT Switch)
+- Active Directory Domain Services (AD DS)
+- DNS (Forward & Reverse Lookup Zones, Forwarders)
+- DHCP (Scopes, Exclusions, Reservations)
+- RRAS (Routing and Remote Access Service)
+- PowerShell (provisioning & troubleshooting)
+- RSAT (Remote Server Administration Tools)
+
+**What I built:**
+- Created a NAT Switch on Hyper-V host and deployed a Windows Server Core RRAS VM for routing between subnets (10.0.0.0/24 and 10.0.1.0/24)
+- Deployed parent domain corp.proj.ca with DC server, configured AD DS, DNS forward/reverse lookup zones, and joined IT-01 client to domain
+- Set up a dedicated DHCP server VM with scope, exclusions, and IP reservations; verified DHCP assignment on IT-01
+- Installed RSAT on IT-01 and managed all servers (DC, DHCP, RRAS) centrally from a single Windows 11 client
+- Managed Active Directory: created OUs, security groups, user accounts, renamed admin accounts, and moved computers into structured OUs
+- Deployed a Child Domain Controller (FINDC / fin.corp.proj.ca) on a separate subnet, established two-way AD replication and DNS across both domains
+- Configured DNS forwarders and verified cross-domain name resolution
+- Troubleshot Double NAT issue (Hyper-V NAT-Switch vs RRAS NAT conflict), static routing gaps, and credential failures during child domain promotion
+
+**Network Diagram:**
+<img width="616" height="471" alt="スクリーンショット 2026-04-30 午後2 45 01" src="https://github.com/user-attachments/assets/834b51cf-cecf-4ea1-9485-f36ec20c3ecc" />
+
+**Demo Video:**
+https://drive.google.com/file/d/1UwvhyRCF5vW-DiYp70tSQrB06f9ktFDm/view?usp=sharing
+
+**What I learned:**
+- How NAT-Switch in Hyper-V handles external IP resolution — separate from RRAS NAT, and running both causes Double NAT issues
+- How static routes must be manually added on both RRAS and Parent DC for Layer 3 cross-subnet communication
+- How child domain promotion fails when DNS lookup is incomplete — and how to diagnose with nslookup and Get-NetRoute
+- How RSAT centralizes multi-server management from a single client machine
+- How DHCP scopes, exclusions, and reservations control IP assignment across a domain environment
 
 ## Skills
 - Windows Server / Windows Server Core
@@ -175,3 +212,11 @@ https://drive.google.com/file/d/1zDWLs1tbTxz0OpXYTuE9fXHdmnya-4wW/view?usp=share
 - pfSense (Firewall / Routing / IPsec VPN)
 - PowerShell Scripting
 - Troubleshooting & Technical Documentation
+- RRAS (Routing & Remote Access)
+- RSAT
+- Windows ADK / Sysprep
+- Subnetting
+- Group Policy (GPO)
+- Exchange 
+- ITIL Foundations
+
