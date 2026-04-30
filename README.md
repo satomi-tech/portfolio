@@ -25,6 +25,9 @@ Built a full enterprise-level network environment using only virtual machines on
 - Configured iSCSI storage and Hyper-V cluster with Live Migration
 - Documented 190+ pages of step-by-step configuration and troubleshooting
 
+**Demo Video:**
+[Watch the network infrastructure test on YouTube](https://youtu.be/_P3HYmrGIL4)
+
 **What I learned:**
 - How enterprise infrastructure is structured and connected
 - Troubleshooting under pressure (rebuilt the entire environment from scratch after hardware failure)
