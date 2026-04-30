@@ -79,22 +79,22 @@ Built a simulated multi-site enterprise network connecting two geographically se
 Built a fully functional two-server mail system on CentOS 7 using virtual machines, with pfSense as the NAT router/gateway.
 
 **Technologies used:**
-CentOS 7 (x2 virtual machines)
-Postfix (SMTP server)
-Dovecot (IMAP / POP3)
-SquirrelMail + Apache (Webmail)
-pfSense (Firewall / Router)
-Thunderbird (Mail client)
-Wireshark / tshark (Network traffic analysis)
+- CentOS 7 (x2 virtual machines)
+- Postfix (SMTP server)
+- Dovecot (IMAP / POP3)
+- SquirrelMail + Apache (Webmail)
+- pfSense (Firewall / Router)
+- Thunderbird (Mail client)
+- Wireshark / tshark (Network traffic analysis)
 
 **What I built:**
-Configured two mail servers with separate domains (mail.tsplab.com / mail2.tsplab.com)
-Set up pfSense DNS resolver with MX records and static DHCP mappings
-Configured Postfix with Gmail relay (SASL authentication, TLS, port 587)
-Installed and configured Dovecot for IMAP (port 143) and POP3 (port 110)
-Installed SquirrelMail on Apache for browser-based webmail access
-Verified email delivery across both servers using telnet and Thunderbird
-Captured live SMTP traffic between servers using tshark
+- Configured two mail servers with separate domains (mail.tsplab.com / mail2.tsplab.com)
+- Set up pfSense DNS resolver with MX records and static DHCP mappings
+- Configured Postfix with Gmail relay (SASL authentication, TLS, port 587)
+- Installed and configured Dovecot for IMAP (port 143) and POP3 (port 110)
+- Installed SquirrelMail on Apache for browser-based webmail access
+- Verified email delivery across both servers using telnet and Thunderbird
+- Captured live SMTP traffic between servers using tshark
 
 **Network Diagram:**
 <img width="805" height="572" alt="スクリーンショット 2026-04-30 午後2 05 03" src="https://github.com/user-attachments/assets/567cb78c-73ba-49c9-878c-ddf6e4631240" />
@@ -104,18 +104,18 @@ Watch mail sent between 2 domains
 https://drive.google.com/file/d/1bK2HzKV_nOraDDUuZ0-t9Phd2wyj9qHU/view?usp=share_link
 
 **What I learned:**
-How SMTP, IMAP, and POP3 work at the protocol level (tested manually via telnet)
-How pfSense DNS resolver handles internal MX records
-Debugging mail delivery issues using logs and queue inspection
+- How SMTP, IMAP, and POP3 work at the protocol level (tested manually via telnet)
+- How pfSense DNS resolver handles internal MX records
+- Debugging mail delivery issues using logs and queue inspection
 
 
 ## Skills
-Windows Server / Windows Core
-Linux (CentOS, Ubuntu)
-Networking (TCP/IP, DNS, DHCP, SMTP, IMAP, POP3, Firewall)
-Virtualization (Hyper-V, VirtualBox)
-Active Directory
-Troubleshooting & Documentation
+- Windows Server / Windows Core
+- Linux (CentOS, Ubuntu)
+- Networking (TCP/IP, DNS, DHCP, SMTP, IMAP, POP3, Firewall)
+- Virtualization (Hyper-V, VirtualBox)
+- Active Directory
+- Troubleshooting & Documentation
 
 
 ----------------------------------------------------------------
@@ -124,42 +124,42 @@ Built a fully functional Windows imaging and deployment pipeline using WDS on Wi
 with Hyper-V for virtualization and a customized Windows 10 Gold Image for automated network deployment.
 
 **Technologies used:**
-Windows Server 2025 (WDS Server VM)
-Windows 10 Pro (Gold Image Reference VM)
-Hyper-V (Virtualization)
-Windows Deployment Services (WDS)
-Windows Assessment and Deployment Kit (ADK) — Deployment Tools
-Windows System Image Manager (WSIM)
-Sysprep (System Preparation Tool)
-Active Directory Domain Services (AD DS)
-DHCP Server
-PXE Boot (Network Boot)
-PowerShell (Server provisioning scripts)
+- Windows Server 2025 (WDS Server VM)
+- Windows 10 Pro (Gold Image Reference VM)
+- Hyper-V (Virtualization)
+- Windows Deployment Services (WDS)
+- Windows Assessment and Deployment Kit (ADK) — Deployment Tools
+- Windows System Image Manager (WSIM)
+- Sysprep (System Preparation Tool)
+- Active Directory Domain Services (AD DS)
+- DHCP Server
+- PXE Boot (Network Boot)
+- PowerShell (Server provisioning scripts)
 
 
 **What I built:**
-Created a customized Windows 10 Pro Gold Image reference VM in Hyper-V with pre-installed apps
+- Created a customized Windows 10 Pro Gold Image reference VM in Hyper-V with pre-installed apps
 (Google Chrome, Wireshark, Adobe Acrobat) and RSAT tools installed via PowerShell
-Ran Sysprep (OOBE + Generalize + Shutdown) to prepare the image for deployment
-Deployed a dedicated WDS Server (IP: 10.0.0.6/24) joined to the domain corp.proj.ca
-Configured a secondary disk (40 GB) on the WDS server to host the RemoteInstall folder (E:\RemoteInstall)
-Installed and configured Windows Deployment Services via Server Manager (Deployment Server + Transport Server roles)
-Configured WDS to respond to all PXE clients (known and unknown) with no F12 key requirement
-Created a CaptureVM using a differencing disk from the Gold Image to capture the custom image via WDS boot
-Used DiskPart inside the WDS capture environment to format the secondary disk and save GoldImage.wim
-Added the captured image to the WDS server as an install image under the W10 image group
-Installed Windows ADK (Deployment Tools) to access Windows System Image Manager (WSIM)
-Exported the install image and created a catalog file (Install_GoldImage.clg) using WSIM
-Created and configured a fully automated WDS Client Unattend Answer File (WDSClientUnattend.xml) covering:
+- Ran Sysprep (OOBE + Generalize + Shutdown) to prepare the image for deployment
+- Deployed a dedicated WDS Server (IP: 10.0.0.6/24) joined to the domain corp.proj.ca
+- Configured a secondary disk (40 GB) on the WDS server to host the RemoteInstall folder (E:\RemoteInstall)
+- Installed and configured Windows Deployment Services via Server Manager (Deployment Server + Transport Server roles)
+- Configured WDS to respond to all PXE clients (known and unknown) with no F12 key requirement
+- Created a CaptureVM using a differencing disk from the Gold Image to capture the custom image via WDS boot
+- Used DiskPart inside the WDS capture environment to format the secondary disk and save GoldImage.wim
+- Added the captured image to the WDS server as an install image under the W10 image group
+- Installed Windows ADK (Deployment Tools) to access Windows System Image Manager (WSIM)
+- Exported the install image and created a catalog file (Install_GoldImage.clg) using WSIM
+- Created and configured a fully automated WDS Client Unattend Answer File (WDSClientUnattend.xml) covering:
 
-Pass 1 (windowsPE): Language/locale settings, disk configuration (4 partitions: WinRE / EFI / MSR / Windows), WDS image selection and login credentials
-Pass 4 (specialize): Computer name, registered owner/organization, timezone, domain join (corp.proj.ca), domain credentials
-Pass 7 (oobeSystem): Auto-logon, OOBE skip settings, local admin account (_Lysadmin), user account password
+- Pass 1 (windowsPE): Language/locale settings, disk configuration (4 partitions: WinRE / EFI / MSR / Windows), WDS image selection and login credentials
+- Pass 4 (specialize): Computer name, registered owner/organization, timezone, domain join (corp.proj.ca), domain credentials
+- Pass 7 (oobeSystem): Auto-logon, OOBE skip settings, local admin account (_Lysadmin), user account password
 
 
-Validated the answer file in WSIM with zero errors
-Linked the unattend file to the GoldImage install image for fully unattended deployment
-Deployed the custom Windows 10 image to a new VM (IT-SUG-001) over the network via PXE boot with no manual input required
+- Validated the answer file in WSIM with zero errors
+- Linked the unattend file to the GoldImage install image for fully unattended deployment
+- Deployed the custom Windows 10 image to a new VM (IT-SUG-001) over the network via PXE boot with no manual input required
 
 
 **Network Diagram:**
@@ -169,20 +169,20 @@ Deployed the custom Windows 10 image to a new VM (IT-SUG-001) over the network v
 https://drive.google.com/file/d/1zDWLs1tbTxz0OpXYTuE9fXHdmnya-4wW/view?usp=share_link
 
 **What I learned:**
-How PXE boot works at the network level — DHCP assigns an IP, WDS responds with the boot environment
-How Sysprep generalizes a Windows installation so it can be deployed to different hardware
-How WIM files (Windows Imaging Format) store and transport disk images
-How the Windows ADK / WSIM answer file passes configuration through each setup phase (windowsPE → specialize → oobeSystem)
-How disk partition tables (WinRE, EFI, MSR, Windows) are defined and automated in an unattend file
-How to troubleshoot WDS image catalog errors (resource section missing → export image first, then re-catalog)
-How differencing disks allow non-destructive VM cloning for capture workflows
+- How PXE boot works at the network level — DHCP assigns an IP, WDS responds with the boot environment
+- How Sysprep generalizes a Windows installation so it can be deployed to different hardware
+- How WIM files (Windows Imaging Format) store and transport disk images
+- How the Windows ADK / WSIM answer file passes configuration through each setup phase (windowsPE → specialize → oobeSystem)
+- How disk partition tables (WinRE, EFI, MSR, Windows) are defined and automated in an unattend file
+- How to troubleshoot WDS image catalog errors (resource section missing → export image first, then re-catalog)
+- How differencing disks allow non-destructive VM cloning for capture workflows
 
 
 ## Skills
-Windows Server Administration
-Windows Deployment Services (WDS) / PXE Imaging
-Hyper-V Virtualization
-Sysprep & WIM Image Management
+- Windows Server Administration
+- Windows Deployment Services (WDS) / PXE Imaging
+- Hyper-V Virtualization
+- Sysprep & WIM Image Management
 Windows ADK / WSIM / Unattend Answer Files
 Active Directory Domain Services
 PowerShell Scripting (server provisioning, RSAT install)
